@@ -1,6 +1,6 @@
 
-# Copyright (C) Igor Sysoev
 
+# 定义变量，帮助函数
 
 help=no
 
@@ -13,6 +13,7 @@ NGX_LOCK_PATH=
 NGX_USER=
 NGX_GROUP=
 
+# TODO
 CC=${CC:-gcc}
 CPP=
 NGX_OBJS=objs
@@ -115,7 +116,7 @@ NGX_PERL=perl
 
 NGX_CPU_CACHE_LINE=
 
-
+#TODO
 for option
 do
     case "$option" in
@@ -238,6 +239,8 @@ do
         ;;
     esac
 done
+
+
 
 
 if [ $help = yes ]; then
@@ -369,7 +372,7 @@ if [ ".$NGX_PLATFORM" = ".win32" ]; then
     NGX_WINE=$WINE
 fi
 
-
+# TODO 默认值？
 NGX_PREFIX=${NGX_PREFIX:-/usr/local/nginx}
 
 

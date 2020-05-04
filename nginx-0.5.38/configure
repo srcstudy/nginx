@@ -2,12 +2,13 @@
 
 # Copyright (C) Igor Sysoev
 
-
+#  $@ 所有参数
+# 把"替换成\\"
 NGX_CONFIGURE=`echo $@ | sed 's/"/\\\\"/g'`
 
 . auto/options
 . auto/init
-. auto/sources
+. auto/sources  #NEXT
 
 test -d $NGX_OBJS || mkdir $NGX_OBJS
 

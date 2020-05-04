@@ -1,11 +1,13 @@
 
 /*
- * Copyright (C) Igor Sysoev
+ * 
  */
 
 
 #ifndef _NGX_CONFIG_H_INCLUDED_
 #define _NGX_CONFIG_H_INCLUDED_
+
+
 
 
 #include <ngx_auto_headers.h>
@@ -15,6 +17,9 @@
 #define __FreeBSD__        4
 #define __FreeBSD_version  480101
 #endif
+
+
+
 
 
 #if (NGX_FREEBSD)
@@ -39,13 +44,22 @@
 #endif
 
 
+
+
+
+
+
+
+// sndlowat?
 #ifndef NGX_HAVE_SO_SNDLOWAT
 #define NGX_HAVE_SO_SNDLOWAT     1
 #endif
 
 
-#if !(NGX_WIN32)
 
+
+
+#if !(NGX_WIN32)
 #define ngx_signal_helper(n)     SIG##n
 #define ngx_signal_value(n)      ngx_signal_helper(n)
 
@@ -65,14 +79,23 @@
 #define NGX_CHANGEBIN_SIGNAL     USR2
 #endif
 
+
+
 #define ngx_cdecl
 #define ngx_libc_cdecl
 
-#endif
+#endif //NGX_WIN32
+
+
+
+
+
+
 
 typedef intptr_t        ngx_int_t;
-typedef uintptr_t       ngx_uint_t;
 typedef intptr_t        ngx_flag_t;
+typedef uintptr_t       ngx_uint_t;
+
 
 
 #define NGX_INT32_LEN   sizeof("-2147483648") - 1

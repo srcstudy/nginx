@@ -1,5 +1,5 @@
 
-# Copyright (C) Igor Sysoev
+# 生成Makefile
 
 
 NGX_MAKEFILE=$NGX_OBJS/Makefile
